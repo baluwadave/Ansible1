@@ -5,4 +5,7 @@
     - name: writing my first script 
       debug:
         msg: "{my first playbook is operational now}"
+    - name: this is next content
+      debug:
+        msg: "{this is script two}"
 ...        
