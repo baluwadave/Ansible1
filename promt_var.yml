@@ -1,0 +1,14 @@
+---
+- name: Ensure web server is running
+  hosts: all
+  vars_prompt:
+      - name: this is promt varible 
+        prompt: "Balu"
+  tasks:   
+    - name: "working on varible from varible file script"
+      debug: 
+        msg: "{{prompt}}"  
+    - name: "working on varible first script"
+      debug: 
+        msg: "{{prompt}}"
+...        
