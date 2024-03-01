@@ -1,10 +1,9 @@
 ---
 - name: Ensure web server is running
   hosts: all
-  vars:
-     URL: "working on global varibles "
+  vars_files: balu.yml
   tasks:   
-    - name: "working on varible first script"
+    - name: "working on varible from varible file script"
       debug: 
         msg: "{{URL}}"  
     - name: "working on varible first script"
