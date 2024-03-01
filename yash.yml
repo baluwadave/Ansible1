@@ -1,9 +1,9 @@
 ---
-  - name: Ensure web server is running
-    hosts: all
-      vars:
-        URL: "working on varibles "
-  - name: "working on varible first script"
-    debug: 
-      msg: "{{URL}}"
+- name: Ensure web server is running
+  hosts: all
+    vars:
+      URL: "working on varibles "
+- name: "working on varible first script"
+  debug: 
+    msg: "{{URL}}"
 ...       
