@@ -7,8 +7,8 @@
   tasks:   
     - name: "working on varible from varible file script"
       debug: 
-        msg: "{{prompt}}"  
+        msg: "HI Balu"  
     - name: "working on varible first script"
       debug: 
-        msg: "{{prompt}}"
+        msg: "Hi Yash"
 ...        
