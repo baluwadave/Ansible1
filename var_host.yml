@@ -1,11 +1,11 @@
 ---
 - name: Ensure web server is running
   hosts: all
- tasks:   
-    - name: "working on varible from varible file script"
+  tasks:   
+    - name: "working on host changes file script"
       debug: 
         msg: "{{URL}}"  
-    - name: "working on varible first script"
+    - name: "working on host chnages done :wq first script"
       debug: 
         msg: "{{URL}}"
 ...     
