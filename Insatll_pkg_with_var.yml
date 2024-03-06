@@ -7,5 +7,5 @@
     tasks:
       -name: Installing packges
       action: apt name: "{{package}}" state: latest 
-... 
+...  
 
