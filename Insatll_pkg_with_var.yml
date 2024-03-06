@@ -1,0 +1,11 @@
+---
+-name: Example for install packages with variables
+ hosts: all
+ become: yes
+    vars:
+      package: appche2
+    tasks:
+      -name: Installing packges
+      action: apt name: "{{package}}" state: latest 
+... 
+
