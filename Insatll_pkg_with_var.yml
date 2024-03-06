@@ -1,12 +1,34 @@
 ---
-- name: Example for install packages with variables
-  hosts: all
-    vars:
-      package: appche2
-  tasks:
-      - name: Installing packges
-        action: apt 
-          name: "{{package}}"
-          state: latest 
-...  
+- name: Install Apache
+  hosts: your_target_servers
+  become: yes  # This ensures that the tasks are run with sudo privileges
 
+  tasks:
+    - name: Update apt package cache (for Debian/Ubuntu)
+      apt:
+        update_cache: yes
+      when: ansible_os_family == 'Debian'
+
+    - name: Install Apache (for Debian/Ubuntu)
+      apt:
+        name: apache2
+        state: present
+      when: ansible_os_family == 'Debian'
+
+    - name: Install Apache (for RedHat/CentOS)
+      yum:
+        name: httpd
+        state: present
+      when: ansible_os_family == 'RedHat'
+      
+    - name: Start Apache service
+      service:
+        name: apache2
+        state: started
+      when: ansible_os_family == 'Debian'
+
+    - name: Start Apache service
+      service:
+        name: httpd
+        state: started
+      when: ansible_os_family == 'RedHat'
