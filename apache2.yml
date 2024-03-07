@@ -1,0 +1,10 @@
+---
+- name: Install package
+  hosts: all
+  become: yes
+  vars:
+    package: apache2
+  tasks:
+    - name: installing tree package
+      action: apt name="{{package}}" state=latest
+...
