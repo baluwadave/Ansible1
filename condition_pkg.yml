@@ -4,6 +4,6 @@
   become: yes
   tasks:
     - name: Install nginx pkg in debain
-      command: apt install nginx -y
+      command: apt install tree -y
       when: ansible_os_family == 'Debian'
 ...      
