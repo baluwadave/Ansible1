@@ -6,6 +6,6 @@
   tasks:
     - name: Remove Apache2 package
       apt:
-        name: apache2
+        name: tree
         state: absent
 ...        
