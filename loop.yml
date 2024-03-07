@@ -4,7 +4,9 @@
   become: yes
   tasks:
     - name: add user in loop
-      user: user="{{item}}" state=present
+      user: 
+        name: "{{item}}" 
+        state: present
       with_items:
                 - balu
                 - yash
