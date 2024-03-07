@@ -5,5 +5,5 @@
     - name: copying files 
       copy:
         src: /home/ubuntu/file1.txt
-        dest: /mnt/
+        dest: /home/ubuntu
 ...      
