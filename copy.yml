@@ -1,0 +1,9 @@
+---
+- name: copying file into nodes
+  hosts: all
+  tasks:
+    - name: copying files 
+      copy:
+      src: /home/ubuntu/file1.txt
+      dest: /mnt/
+...      
