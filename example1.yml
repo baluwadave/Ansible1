@@ -1,0 +1,11 @@
+---
+- name: Example install package with variable
+  hosts: all
+  become: yes
+    vars:
+      package: nginx
+  tasks:
+    - name: install nginx in all machine
+      apt:
+      name: "{{package}}" 
+      state: latest   
