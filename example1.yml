@@ -6,7 +6,7 @@
       package: nginx
   tasks:
     - name: install nginx in all machine
-      apt:
-      name: "{{package}}" 
-      state: latest   
+        apt:
+        name: "{{package}}" 
+        state: latest   
 ...      
