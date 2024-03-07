@@ -6,7 +6,7 @@
     - name: add user in loop
       user: user="{{item}}" state=present
       with_items:
-                -balu
-                -yash
-                -samyak
+                - balu
+                - yash
+                - samyak
 ...                
