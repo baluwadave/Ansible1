@@ -1,0 +1,11 @@
+---
+- name: Uninstall Apache2
+  hosts: all
+  become: yes  # This enables privilege escalation to execute commands with root permissions
+
+  tasks:
+    - name: Remove Apache2 package
+      apt:
+        name: apache2
+        state: absent
+...        
