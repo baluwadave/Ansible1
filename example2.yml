@@ -6,5 +6,5 @@
     package: tree
   tasks:
     - name: installing tree package
-      action: apt name: "{{package}}" state: latest
+      action: apt name: "{{"package"}}" state: latest
 ...        
