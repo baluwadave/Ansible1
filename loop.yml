@@ -1,0 +1,12 @@
+---
+- name: Adding multiple user 
+  hosts: all
+  become: yes
+  tasks:
+    - name: add user in loop
+      user: name="{{item}}" state state=present
+      with_items:
+                -balu
+                -yash
+                -samyak
+...                

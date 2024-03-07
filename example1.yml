@@ -13,5 +13,5 @@
     - name: install nginx in all machine
       apt:
         name: "{{package}}" 
-        state: absent  
+        state: absent 
 ...      
