@@ -4,6 +4,6 @@
   tasks:
     - name: copying files 
       copy:
-      src: /home/ubuntu/file1.txt
-      dest: /mnt/
+        src: /home/ubuntu/file1.txt
+        dest: /mnt/
 ...      
