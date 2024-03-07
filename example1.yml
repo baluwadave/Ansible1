@@ -5,6 +5,11 @@
   vars:
       package: nginx
   tasks:
+      - name: Update apt package cache (for Debian/Ubuntu)
+      apt:
+        update_cache: yes
+      when: ansible_os_family == 'Debian'
+      
     - name: install nginx in all machine
       apt:
         name: "{{package}}" 
