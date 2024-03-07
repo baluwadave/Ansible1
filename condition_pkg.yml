@@ -1,0 +1,9 @@
+---
+- name: condition package 
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install nginx pkg in debain
+      command: apt install nginx -y
+      when: ansible_os_family == 'Debian'
+...      
