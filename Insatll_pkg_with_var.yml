@@ -1,6 +1,6 @@
 ---
-- name: Install Apache
-  hosts: your_target_servers
+- name: Install Apache and httpd
+  hosts: all
   become: yes  # This ensures that the tasks are run with sudo privileges
 
   tasks:
