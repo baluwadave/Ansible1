@@ -1,17 +1,13 @@
----
-# tasks file for nginx_role
-- name: Install nginx
-  hosts: all
-  become: yes  # This ensures that the tasks are run with sudo privileges
-
-  tasks:
-    - name: Update apt package cache (for Debian/Ubuntu)
-      apt:
-        update_cache: yes
-      when: ansible_os_family == 'Debian'
-
-    - name: Install nginx (for Debian/Ubuntu)
-      apt:
-        name: nginx
-        state: present
-      when: ansible_os_family == 'Debian'
+- name: installing nginx
+  package:
+    name: nginx
+    state: latest
+- name: copyig index.html
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+  notify:
+    - stratingnginx
+- name: print msg
+  debug:
+    msg: "{{URL}}"

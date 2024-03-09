@@ -2,7 +2,7 @@
 - name: Ensure web server is running
   hosts: all
   vars_files: balu.yml
-  tasks:   
+  tasks:    
     - name: "working on varible from varible file script"
       debug: 
         msg: "{{URL}}"  
