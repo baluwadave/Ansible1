@@ -1,6 +1,4 @@
----
-- hosts: all
-  remote_user: root
+- name: Example playbook
+  hosts: all
   roles:
-    - nginx_role
-...
+    - my_role
